@@ -123,34 +123,6 @@
                 transform: translateY(-10px);
             }
         }
-
-        /* Boneka bergerak */
-        .doll {
-            margin-top: 20px;
-        }
-        .doll img {
-            width: 200px;
-            animation: bounce 2s infinite;
-        }
-
-        /* Responsif untuk mobile */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1.2rem;
-            }
-            button {
-                font-size: 0.9rem;
-            }
-            .icons {
-                font-size: 1.5rem;
-            }
-            .doll img {
-                width: 150px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -188,13 +160,8 @@
         yesBtn.addEventListener("click", function() {
             document.body.innerHTML = `
                 <div style="text-align: center; margin-top: 20%;">
-                    <h1>Aku juga sayang kamu❤️</h1>
+                    <h1>Aku juga sayang kamu ❤️</h1>
                     <i class="fas fa-heart" style="font-size: 5rem; color: #ff1493;"></i>
-
-                    <!-- Boneka bergerak -->
-                    <div class="doll">
-                        <img src="https://media.giphy.com/media/3o6gEdheDE1eFrX8iE/giphy.gif" alt="Boneka Bergerak">
-                    </div>
                 </div>
             `;
         });
