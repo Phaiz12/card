@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Ulang Tahun</title>
+
+    <!-- Link Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap">
+
+    <!-- Link Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             margin: 0;
@@ -13,7 +20,7 @@
             align-items: center;
             height: 100vh;
             background-color: #ffe4e1;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
         .content {
@@ -22,6 +29,7 @@
             z-index: 1;
         }
         h1 {
+            font-family: 'Pacifico', cursive;
             font-size: 3rem;
             color: #ff1493;
             margin: 0;
@@ -96,6 +104,53 @@
             75% { transform: translateX(-5px); }
             100% { transform: translateX(0); }
         }
+
+        /* Ikon lucu */
+        .icons {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #ff69b4;
+        }
+        .icons i {
+            margin: 0 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Boneka bergerak */
+        .doll {
+            margin-top: 20px;
+        }
+        .doll img {
+            width: 200px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Responsif untuk mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            button {
+                font-size: 0.9rem;
+            }
+            .icons {
+                font-size: 1.5rem;
+            }
+            .doll img {
+                width: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,11 +158,21 @@
         <h1>Selamat Ulang Tahun, Sayang!</h1>
         <p>Semoga harimu penuh dengan kebahagiaan dan cinta.</p>
         <p>Kamu masih sayang aku kan?</p>
+
+        <!-- Tombol interaktif -->
         <div class="buttons">
             <button id="yesBtn">Iya</button>
             <button id="noBtn">Tidak</button>
         </div>
         <p id="messageNo">Tidak boleh, kamu harus jawab iya!</p>
+
+        <!-- Ikon lucu -->
+        <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-smile"></i>
+            <i class="fas fa-birthday-cake"></i>
+            <i class="fas fa-gift"></i>
+        </div>
     </div>
 
     <div class="balloon" style="background-color: #ff69b4; left: 20%; animation-delay: 0s;"></div>
@@ -123,7 +188,13 @@
         yesBtn.addEventListener("click", function() {
             document.body.innerHTML = `
                 <div style="text-align: center; margin-top: 20%;">
-                    <h1>Aku juga sayang kamu ❤️</h1>
+                    <h1>Aku juga sayang kamu❤️</h1>
+                    <i class="fas fa-heart" style="font-size: 5rem; color: #ff1493;"></i>
+
+                    <!-- Boneka bergerak -->
+                    <div class="doll">
+                        <img src="https://media.giphy.com/media/3o6gEdheDE1eFrX8iE/giphy.gif" alt="Boneka Bergerak">
+                    </div>
                 </div>
             `;
         });
